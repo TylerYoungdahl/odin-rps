@@ -1,3 +1,6 @@
+const btn = document.querySelectorAll(".btn");
+const results = document.querySelector("#results");
+
 function getComputerChoice() {
   const randNum = Math.floor(Math.random() * 3) + 1;
   let computerChoice = "";
@@ -43,12 +46,4 @@ function playRound(playerSelection, computerSelection) {
   console.log(`Winner: ${winner}`);
 }
 
-function playGame() {
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-}
-
-playGame();
+btn.addEventListener("click", playRound());
